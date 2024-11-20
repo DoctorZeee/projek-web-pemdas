@@ -8,5 +8,10 @@ def home ():
     """Render Home"""
     return render_template ('home.html')
 
+@app.route ('/about')
+def about ():
+    """Render Home"""
+    return render_template ('about.html')
+
 if __name__ == ('__main__'):
     app.run (debug=True)
