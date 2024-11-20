@@ -13,5 +13,10 @@ def about ():
     """Menampilkan Halaman About"""
     return render_template ('about.html')
 
+@app.route ('/lowongan')
+def lowongan ():
+    """Menampilkan Halaman Alowongan"""
+    return render_template ('lowongan.html')
+
 if __name__ == ('__main__'):
     app.run (debug=True)
