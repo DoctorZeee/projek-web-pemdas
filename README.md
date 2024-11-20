@@ -26,5 +26,6 @@ Jika ingin coding
 5. Ketik git pull
 
 Note :
-Jangan lupa ganti branch sebelum ngedit codenya
-command yang kukasih di sini diketik di git bash
+1. Jangan lupa ganti branch sebelum ngedit codenya
+2. Command yang kukasih di sini diketik di git bash
+3. Kalo error kabarin grup aja ges
