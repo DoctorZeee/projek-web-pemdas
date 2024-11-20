@@ -18,5 +18,11 @@ def lowongan ():
     """Menampilkan Halaman Alowongan"""
     return render_template ('lowongan.html')
 
+
+@app.route ('/jual')
+def lowongan ():
+    """Menampilkan Halaman Alowongan"""
+    return render_template ('jual.html')
+
 if __name__ == ('__main__'):
     app.run (debug=True)
