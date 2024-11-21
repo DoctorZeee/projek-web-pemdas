@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Website Lowongan Pekerjaan{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Lowongan Kerja</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/job">Lowongan Kerja</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy;2024 Website Lowongan Pekerjaan</p>
+    </footer>
+
+</body>
+</html>
