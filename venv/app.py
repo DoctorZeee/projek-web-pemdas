@@ -3,7 +3,7 @@ from flask import Flask,render_template
 
 app = Flask(__name__)
 
-def daftarlowongan ():
+def datalowongan ():
     """data lowongan yang akan tampil"""
     return [
         {
@@ -83,10 +83,11 @@ def home ():
     """Render Home"""
     return render_template ('home.html')
 
-@app.route ('/job')
+@app.route ('/jobs')
 def job ():
     """Render Job"""
-    return render_template ('job.html')
+    job_listings = datalowongan ()
+    return render_template ('job.html', jobs=job_listings)
 
 @app.route ('/about')
 def about ():
