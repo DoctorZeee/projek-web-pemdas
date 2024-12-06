@@ -1,20 +1,27 @@
-{% extends "base.html" %}
-
-{% block content %}
-<div class="container">
-    <h1>Lowongan Pekerjaan Tersedia</h1>
-    <div class="job-grid">
-        {% for job in jobs %}
-        <div class="job-card">
-            <h2>{{ job.title }}</h2>
-            <div class="job-details">
-                <p class="company">{{ job.company }}</p>
-                <p class="location">📍 {{ job.location }}</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowongan Pekerjaan Tersedia</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Lowongan Pekerjaan Tersedia</h1>
+        <div class="job-grid">
+            {% for job in jobs %}
+            <div class="job-card">
+                <h2>{{ job.title }}</h2>
+                <div class="job-details">
+                    <p class="company">{{ job.company }}</p>
+                    <p class="location">📍 {{ job.location }}</p>
+                </div>
+                <p class="description">{{ job.description }}</p>
+                <a href="{{ job.link }}" target="_blank" class="apply-button">Lihat Detail</a>
             </div>
-            <p class="description">{{ job.description }}</p>
-            <a href="{{ job.link }}" target="_blank" class="apply-button">Lihat Detail</a>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
-{% endblock %}
+</body>
+</html>
