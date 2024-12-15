@@ -4,7 +4,7 @@ from flask import Flask,render_template
 app = Flask(__name__)
 
 def datalowongan ():
-    """data lowongan yang akan tampil"""
+    """Metode List yang memuat data yang akan tampil di laman job"""
     return [
         {
             'title': 'Sales Manager',
@@ -80,22 +80,23 @@ def datalowongan ():
 
 @app.route ('/')
 def home ():
-    """Render Home"""
+    """Render halaman Home"""
     return render_template ('home.html')
 
 @app.route ('/jobs')
 def job ():
-    """Render Job"""
+    """Render halaman Job"""
     job_listings = datalowongan ()
     return render_template ('job.html', jobs=job_listings)
 
 @app.route ('/about')
 def about ():
-    """Render About"""
+    """Render halaman About"""
     return render_template ('about.html')
 
 @app.route ('/contact')
 def contact ():
+    """Render halaman About"""
     return render_template ('contact.html')
 
 if __name__ == ('__main__'):

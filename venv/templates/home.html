@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 </head>
 <body>
+    <!-- Navigasi utama -->
     <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/contact">Contact</a></li>
+            <!-- Link ke halaman Home -->
+            <li><a href="/">Home</a></li>
+            <!-- Link ke halaman Jobs -->
+            <li><a href="/jobs">Jobs</a></li>
+            <!-- Link ke halaman Contact -->
+            <li><a href="/contact">Contact</a></li>
         </ul>
-      </nav>
+    </nav>
+
+    <!-- Kontainer utama untuk konten halaman -->
     <div class="container">
         <div class="hero">
+            <!-- Bagian Hero untuk menampilkan promosi utama -->
             <h1>Temukan Lowongan Pekerjaan Impianmu</h1>
             <p>Kumpulan lowongan pekerjaan dari berbagai sumber dalam satu platform</p>
+            <!-- Tombol untuk melihat daftar lowongan pekerjaan -->
             <a href="/jobs" class="cta-button">Lihat Lowongan</a>
+            <!-- Menghubungkan dengan file CSS -->
             <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
         </div>
     </div>
+
+    <!-- Bagian kedua dari halaman yang berisi informasi tentang website -->
     <div class="container">
         <div class="hero">
+            <!-- Judul utama bagian "Tentang SolusiKerja" -->
             <h1>Tentang SolusiKerja</h1>
-            <p>Website SolusiKerja adalah Website mencari lowongan kerja, Website ini ini hanya menampilkan
+            <p>
+                
+                Website SolusiKerja adalah Website mencari lowongan kerja. Website ini hanya menampilkan
                 informasi saja yang kami dapat dari internet. Di dalam website tidak terdapat transaksi ataupun
-                pengupload an data.<br>
-                Website ini menggunakan teknologi HTML, css dan framework flask
-                Di dalam website ini kami menggunakan fitur fitur :<br>
-                1. Halaman home :<br>
+                pengupload-an data.<br>
+                Website ini menggunakan teknologi HTML, CSS, dan framework Flask.
+                Fitur yang tersedia di dalam website ini:<br>
+                1. Halaman Home:<br>
                 Menampilkan penjelasan singkat mengenai kegunaan dan fungsi Website secara singkat.<br>
-                2. Lowongan<br>
+                2. Lowongan:<br>
                 Halaman ini berisi tentang informasi lowongan kerja yang tersedia, yang kami ambil dari
                 beberapa website.<br>
-                3. Kontak<br>
-                Teknologi yang digunakan<br>
+                3. Kontak:<br>
+                Halaman untuk pengguna yang ingin menghubungi pengelola.<br>
+                Teknologi yang digunakan:<br>
                 1. Framework Python Flask<br>
                 2. HTML<br>
                 3. CSS<br>
-            </p>         
+            </p>
         </div>
     </div>
 </body>
 </html>
-
-

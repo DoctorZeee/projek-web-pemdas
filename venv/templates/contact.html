@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-</html>
+<html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <!-- Menghubungkan dengan file CSS untuk memberikan style pada halaman -->
     <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}" />
   </head>
   <body>
+    <!-- Navigasi utama -->
     <nav>
       <ul>
+        <!-- Link ke halaman Home -->
         <li><a href="/">Home</a></li>
+        <!-- Link ke halaman Jobs -->
+        <li><a href="/jobs">Jobs</a></li>
+        <!-- Link ke halaman Contact -->
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
 
+    <!-- Kontainer utama untuk formulir kontak -->
     <div class="container">
       <h1>Contact Us</h1>
+      <!-- Formulir untuk mengirimkan informasi kontak -->
       <form action="#" method="post">
+        <!-- Label dan input untuk Nama -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
 
+        <!-- Label dan input untuk Email -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
 
+        <!-- Label dan area teks untuk Pesan -->
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
+        <!-- Tombol untuk mengirim formulir -->
         <button type="submit">Submit</button>
       </form>
     </div>
