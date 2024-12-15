@@ -4,23 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lowongan Pekerjaan Tersedia</title>
+    <!-- Menghubungkan dengan file CSS untuk memberikan style pada halaman -->
     <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}" />
 </head>
 <body>
+    <!-- Navigasi utama -->
+    <nav>
+        <ul>
+            <!-- Link ke halaman Home -->
+            <li><a href="/">Home</a></li>
+            <!-- Link ke halaman Jobs -->
+            <li><a href="/jobs">Jobs</a></li>
+            <!-- Link ke halaman Contact -->
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Kontainer utama -->
     <div class="container">
+        <!-- Judul utama halaman -->
         <h1>Lowongan Pekerjaan Tersedia</h1>
+
+        <!-- Grid untuk menampilkan kartu lowongan pekerjaan -->
         <div class="job-grid">
+            <!-- Menggunakan perulangan Flask untuk menampilkan setiap pekerjaan -->
             {% for job in jobs %}
             <div class="job-card">
+                <!-- Menampilkan judul pekerjaan -->
                 <h2>{{ job.title }}</h2>
+                <!-- Menampilkan detail perusahaan dan lokasi -->
                 <div class="job-details">
                     <p class="company">{{ job.company }}</p>
                     <p class="location">📍 {{ job.location }}</p>
                 </div>
+                <!-- Menampilkan deskripsi singkat pekerjaan -->
                 <p class="description">{{ job.description }}</p>
+                <!-- Tombol untuk melihat detail pekerjaan -->
                 <a href="{{ job.link }}" target="_blank" class="apply-button">Lihat Detail</a>
             </div>
             {% endfor %}
+            <!-- Akhir dari perulangan -->
         </div>
     </div>
 </body>
