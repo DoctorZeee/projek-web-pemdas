@@ -89,11 +89,6 @@ def job ():
     job_listings = datalowongan ()
     return render_template ('job.html', jobs=job_listings)
 
-@app.route ('/about')
-def about ():
-    """Render halaman About"""
-    return render_template ('about.html')
-
 @app.route ('/contact')
 def contact ():
     """Render halaman About"""
